@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "EVReflection"
-  s.version      = "5.10.1"
+  s.version      = "5.10.2"
   s.summary      = "Reflection based object mapping. (Dictionary, CKRecord, NSManagedObject, Realm, JSON, XML, Alamofire, Moya, RxSwift, ReactiveSwift)"
 
   s.description  = <<-EOS
-[Reflection](https://github.com/evermeer/EVReflection) based object mapping (Dictionary, CKRecord, NSManagedObject, Realm, JSON and XML) including extensions for [Alamofire](https://github.com/Alamofire/Alamofire) and [Moya](https://github.com/Moya/Moya) for network abstraction. And on top of that extension for [RxSwift](https://github.com/ReactiveX/RxSwift/) and [ReactiveSwift]
+[Reflection](https://github.com/TommyFen/EVReflection) based object mapping (Dictionary, CKRecord, NSManagedObject, Realm, JSON and XML) including extensions for [Alamofire](https://github.com/Alamofire/Alamofire) and [Moya](https://github.com/Moya/Moya) for network abstraction. And on top of that extension for [RxSwift](https://github.com/ReactiveX/RxSwift/) and [ReactiveSwift]
 EOS
 
-  s.homepage     = "https://github.com/evermeer/EVReflection"
+  s.homepage     = "https://github.com/TommyFen/EVReflection"
   s.license      = { :type => "MIT", :file => "License" }
   s.author             = { "Edwin Vermeer" => "edwin@evict.nl" }
   s.social_media_url   = "http://twitter.com/evermeer"
@@ -20,7 +20,7 @@ EOS
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
   s.swift_versions = ['4.0', '4.2', '5.0']
 
-  s.source       = { :git => "https://github.com/evermeer/EVReflection.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/TommyFen/EVReflection.git", :tag => s.version }
   s.default_subspec = "Core"
 
 # This is the core EVReflection library

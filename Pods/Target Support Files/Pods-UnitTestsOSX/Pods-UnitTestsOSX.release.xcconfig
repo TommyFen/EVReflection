@@ -1,13 +1,16 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-CODE_SIGN_IDENTITY =
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/EVReflection-0db607d1" "${PODS_CONFIGURATION_BUILD_DIR}/Moya-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/ReactiveSwift-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/Realm-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/Result-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/RxAtomic-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/XMLDictionary-macOS"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-macOS/Alamofire.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/EVReflection-0db607d1/EVReflection.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Moya-macOS/Moya.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ReactiveSwift-macOS/ReactiveSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Realm-macOS/Realm.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift-macOS/RealmSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Result-macOS/Result.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RxAtomic-macOS/RxAtomic.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift-macOS/RxSwift.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/XMLDictionary-macOS/XMLDictionary.framework/Headers"
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/../Frameworks' '@loader_path/../Frameworks'
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Realm/core"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift "$(PLATFORM_DIR)/Developer/Library/Frameworks" '@executable_path/../Frameworks' '@loader_path/../Frameworks' "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Realm/core" "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
 OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "Alamofire" -framework "CloudKit" -framework "CoreData" -framework "EVReflection" -framework "Foundation" -framework "Moya" -framework "ReactiveSwift" -framework "Realm" -framework "RealmSwift" -framework "Result" -framework "RxAtomic" -framework "RxSwift" -framework "Security" -framework "XMLDictionary"
+OTHER_MODULE_VERIFIER_FLAGS = $(inherited) "-F${PODS_CONFIGURATION_BUILD_DIR}/EVReflection-0db607d1" "-F${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-macOS" "-F${PODS_CONFIGURATION_BUILD_DIR}/Moya-macOS" "-F${PODS_CONFIGURATION_BUILD_DIR}/ReactiveSwift-macOS" "-F${PODS_CONFIGURATION_BUILD_DIR}/Realm-macOS" "-F${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift-macOS" "-F${PODS_CONFIGURATION_BUILD_DIR}/Result-macOS" "-F${PODS_CONFIGURATION_BUILD_DIR}/RxAtomic-macOS" "-F${PODS_CONFIGURATION_BUILD_DIR}/RxSwift-macOS" "-F${PODS_CONFIGURATION_BUILD_DIR}/XMLDictionary-macOS"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/..
 PODS_ROOT = ${SRCROOT}/../Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES
